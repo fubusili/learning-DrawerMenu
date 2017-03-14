@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3425094E758B70606CA46B9C /* Pods_SwiftDrawerMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D518C262B58648D26428AF1A /* Pods_SwiftDrawerMenu.framework */; };
+		F147EDB91E77D8DC00AF6F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDB81E77D8DC00AF6F30 /* AppDelegate.swift */; };
+		F147EDBB1E77D8DC00AF6F30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDBA1E77D8DC00AF6F30 /* ViewController.swift */; };
+		F147EDBE1E77D8DC00AF6F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F147EDBC1E77D8DC00AF6F30 /* Main.storyboard */; };
+		F147EDC01E77D8DC00AF6F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F147EDBF1E77D8DC00AF6F30 /* Assets.xcassets */; };
+		F147EDC31E77D8DC00AF6F30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F147EDC11E77D8DC00AF6F30 /* LaunchScreen.storyboard */; };
+		F147EDCE1E77D8DC00AF6F30 /* SwiftDrawerMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDCD1E77D8DC00AF6F30 /* SwiftDrawerMenuTests.swift */; };
+		F147EDD91E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDD81E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.swift */; };
+		F147EDEC1E77E00A00AF6F30 /* DrawerNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDEB1E77E00A00AF6F30 /* DrawerNavigationViewController.swift */; };
+		F147EDEE1E77E06300AF6F30 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDED1E77E06300AF6F30 /* DrawerViewController.swift */; };
+		F147EDF01E77E07900AF6F30 /* DrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDEF1E77E07900AF6F30 /* DrawerView.swift */; };
+		F147EDF21E77E08B00AF6F30 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDF11E77E08B00AF6F30 /* InfoView.swift */; };
+		F147EDF41E77E0A200AF6F30 /* DrawerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDF31E77E0A200AF6F30 /* DrawerCell.swift */; };
+		F147EE011E77E51300AF6F30 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F147EDFB1E77E51300AF6F30 /* OpenSans-Bold.ttf */; };
+		F147EE021E77E51300AF6F30 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F147EDFC1E77E51300AF6F30 /* OpenSans-Italic.ttf */; };
+		F147EE031E77E51300AF6F30 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F147EDFD1E77E51300AF6F30 /* OpenSans-Light.ttf */; };
+		F147EE041E77E51300AF6F30 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F147EDFE1E77E51300AF6F30 /* OpenSans-LightItalic.ttf */; };
+		F147EE051E77E51300AF6F30 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F147EDFF1E77E51300AF6F30 /* OpenSans-Semibold.ttf */; };
+		F147EE061E77E51300AF6F30 /* OpenSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F147EE001E77E51300AF6F30 /* OpenSans.ttf */; };
+		F147EE091E77E52400AF6F30 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE071E77E52400AF6F30 /* Colors.swift */; };
+		F147EE0A1E77E52400AF6F30 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE081E77E52400AF6F30 /* Fonts.swift */; };
+		F147EE0C1E77EB3E00AF6F30 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE0B1E77EB3E00AF6F30 /* BorderView.swift */; };
+		F147EE0E1E77F34A00AF6F30 /* MultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE0D1E77F34A00AF6F30 /* MultilineLabel.swift */; };
+		F147EE101E77FB0900AF6F30 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE0F1E77FB0900AF6F30 /* NavigationBar.swift */; };
+		F147EE121E78020E00AF6F30 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE111E78020E00AF6F30 /* GraphViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F147EDCA1E77D8DC00AF6F30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F147EDAD1E77D8DC00AF6F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F147EDB41E77D8DC00AF6F30;
+			remoteInfo = SwiftDrawerMenu;
+		};
+		F147EDD51E77D8DC00AF6F30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F147EDAD1E77D8DC00AF6F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F147EDB41E77D8DC00AF6F30;
+			remoteInfo = SwiftDrawerMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17E5E09FE07A28E9F386B4D6 /* Pods-SwiftDrawerMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDrawerMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDrawerMenu/Pods-SwiftDrawerMenu.release.xcconfig"; sourceTree = "<group>"; };
+		BF7555F00B9F9F236880B0C1 /* Pods-SwiftDrawerMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDrawerMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDrawerMenu/Pods-SwiftDrawerMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		D518C262B58648D26428AF1A /* Pods_SwiftDrawerMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDrawerMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147EDB51E77D8DC00AF6F30 /* SwiftDrawerMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDrawerMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147EDB81E77D8DC00AF6F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F147EDBA1E77D8DC00AF6F30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F147EDBD1E77D8DC00AF6F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F147EDBF1E77D8DC00AF6F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F147EDC21E77D8DC00AF6F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F147EDC41E77D8DC00AF6F30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F147EDC91E77D8DC00AF6F30 /* SwiftDrawerMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDrawerMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147EDCD1E77D8DC00AF6F30 /* SwiftDrawerMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDrawerMenuTests.swift; sourceTree = "<group>"; };
+		F147EDCF1E77D8DC00AF6F30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F147EDD41E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDrawerMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F147EDD81E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDrawerMenuUITests.swift; sourceTree = "<group>"; };
+		F147EDDA1E77D8DC00AF6F30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F147EDEB1E77E00A00AF6F30 /* DrawerNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerNavigationViewController.swift; sourceTree = "<group>"; };
+		F147EDED1E77E06300AF6F30 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		F147EDEF1E77E07900AF6F30 /* DrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerView.swift; sourceTree = "<group>"; };
+		F147EDF11E77E08B00AF6F30 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		F147EDF31E77E0A200AF6F30 /* DrawerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerCell.swift; sourceTree = "<group>"; };
+		F147EDFB1E77E51300AF6F30 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		F147EDFC1E77E51300AF6F30 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		F147EDFD1E77E51300AF6F30 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F147EDFE1E77E51300AF6F30 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		F147EDFF1E77E51300AF6F30 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		F147EE001E77E51300AF6F30 /* OpenSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenSans.ttf; sourceTree = "<group>"; };
+		F147EE071E77E52400AF6F30 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F147EE081E77E52400AF6F30 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		F147EE0B1E77EB3E00AF6F30 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		F147EE0D1E77F34A00AF6F30 /* MultilineLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineLabel.swift; sourceTree = "<group>"; };
+		F147EE0F1E77FB0900AF6F30 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		F147EE111E78020E00AF6F30 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F147EDB21E77D8DC00AF6F30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3425094E758B70606CA46B9C /* Pods_SwiftDrawerMenu.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147EDC61E77D8DC00AF6F30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147EDD11E77D8DC00AF6F30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66F06929091035A34ABDFC1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF7555F00B9F9F236880B0C1 /* Pods-SwiftDrawerMenu.debug.xcconfig */,
+				17E5E09FE07A28E9F386B4D6 /* Pods-SwiftDrawerMenu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C60B00D35460245CD560B2E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D518C262B58648D26428AF1A /* Pods_SwiftDrawerMenu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F147EDAC1E77D8DC00AF6F30 = {
+			isa = PBXGroup;
+			children = (
+				F147EDB71E77D8DC00AF6F30 /* SwiftDrawerMenu */,
+				F147EDCC1E77D8DC00AF6F30 /* SwiftDrawerMenuTests */,
+				F147EDD71E77D8DC00AF6F30 /* SwiftDrawerMenuUITests */,
+				F147EDB61E77D8DC00AF6F30 /* Products */,
+				66F06929091035A34ABDFC1E /* Pods */,
+				C60B00D35460245CD560B2E6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F147EDB61E77D8DC00AF6F30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F147EDB51E77D8DC00AF6F30 /* SwiftDrawerMenu.app */,
+				F147EDC91E77D8DC00AF6F30 /* SwiftDrawerMenuTests.xctest */,
+				F147EDD41E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F147EDB71E77D8DC00AF6F30 /* SwiftDrawerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F147EDF91E77E51300AF6F30 /* ColosAndFonts */,
+				F147EDE61E77D99F00AF6F30 /* Navigation */,
+				F147EDEA1E77D99F00AF6F30 /* Graphs */,
+				F147EDE91E77D99F00AF6F30 /* Handwriting */,
+				F147EDE81E77D99F00AF6F30 /* HandwritingLearner */,
+				F147EDE71E77D99F00AF6F30 /* GenericAlgorithm */,
+				F147EDB81E77D8DC00AF6F30 /* AppDelegate.swift */,
+				F147EDBA1E77D8DC00AF6F30 /* ViewController.swift */,
+				F147EDBC1E77D8DC00AF6F30 /* Main.storyboard */,
+				F147EDBF1E77D8DC00AF6F30 /* Assets.xcassets */,
+				F147EDC11E77D8DC00AF6F30 /* LaunchScreen.storyboard */,
+				F147EDC41E77D8DC00AF6F30 /* Info.plist */,
+			);
+			path = SwiftDrawerMenu;
+			sourceTree = "<group>";
+		};
+		F147EDCC1E77D8DC00AF6F30 /* SwiftDrawerMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				F147EDCD1E77D8DC00AF6F30 /* SwiftDrawerMenuTests.swift */,
+				F147EDCF1E77D8DC00AF6F30 /* Info.plist */,
+			);
+			path = SwiftDrawerMenuTests;
+			sourceTree = "<group>";
+		};
+		F147EDD71E77D8DC00AF6F30 /* SwiftDrawerMenuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F147EDD81E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.swift */,
+				F147EDDA1E77D8DC00AF6F30 /* Info.plist */,
+			);
+			path = SwiftDrawerMenuUITests;
+			sourceTree = "<group>";
+		};
+		F147EDE61E77D99F00AF6F30 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F147EDEB1E77E00A00AF6F30 /* DrawerNavigationViewController.swift */,
+				F147EDED1E77E06300AF6F30 /* DrawerViewController.swift */,
+				F147EDEF1E77E07900AF6F30 /* DrawerView.swift */,
+				F147EDF31E77E0A200AF6F30 /* DrawerCell.swift */,
+				F147EDF11E77E08B00AF6F30 /* InfoView.swift */,
+				F147EE0B1E77EB3E00AF6F30 /* BorderView.swift */,
+				F147EE0D1E77F34A00AF6F30 /* MultilineLabel.swift */,
+				F147EE0F1E77FB0900AF6F30 /* NavigationBar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F147EDE71E77D99F00AF6F30 /* GenericAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GenericAlgorithm;
+			sourceTree = "<group>";
+		};
+		F147EDE81E77D99F00AF6F30 /* HandwritingLearner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HandwritingLearner;
+			sourceTree = "<group>";
+		};
+		F147EDE91E77D99F00AF6F30 /* Handwriting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handwriting;
+			sourceTree = "<group>";
+		};
+		F147EDEA1E77D99F00AF6F30 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				F147EE111E78020E00AF6F30 /* GraphViewController.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		F147EDF91E77E51300AF6F30 /* ColosAndFonts */ = {
+			isa = PBXGroup;
+			children = (
+				F147EE071E77E52400AF6F30 /* Colors.swift */,
+				F147EE081E77E52400AF6F30 /* Fonts.swift */,
+				F147EDFA1E77E51300AF6F30 /* Fonts */,
+			);
+			path = ColosAndFonts;
+			sourceTree = "<group>";
+		};
+		F147EDFA1E77E51300AF6F30 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F147EDFB1E77E51300AF6F30 /* OpenSans-Bold.ttf */,
+				F147EDFC1E77E51300AF6F30 /* OpenSans-Italic.ttf */,
+				F147EDFD1E77E51300AF6F30 /* OpenSans-Light.ttf */,
+				F147EDFE1E77E51300AF6F30 /* OpenSans-LightItalic.ttf */,
+				F147EDFF1E77E51300AF6F30 /* OpenSans-Semibold.ttf */,
+				F147EE001E77E51300AF6F30 /* OpenSans.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F147EDB41E77D8DC00AF6F30 /* SwiftDrawerMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F147EDDD1E77D8DC00AF6F30 /* Build configuration list for PBXNativeTarget "SwiftDrawerMenu" */;
+			buildPhases = (
+				820B8FBCD6EC0D89360E40F4 /* [CP] Check Pods Manifest.lock */,
+				F147EDB11E77D8DC00AF6F30 /* Sources */,
+				F147EDB21E77D8DC00AF6F30 /* Frameworks */,
+				F147EDB31E77D8DC00AF6F30 /* Resources */,
+				50D69E20857D1ECEBE82FAD7 /* [CP] Embed Pods Frameworks */,
+				34365C30AECD515C149E412C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftDrawerMenu;
+			productName = SwiftDrawerMenu;
+			productReference = F147EDB51E77D8DC00AF6F30 /* SwiftDrawerMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F147EDC81E77D8DC00AF6F30 /* SwiftDrawerMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F147EDE01E77D8DC00AF6F30 /* Build configuration list for PBXNativeTarget "SwiftDrawerMenuTests" */;
+			buildPhases = (
+				F147EDC51E77D8DC00AF6F30 /* Sources */,
+				F147EDC61E77D8DC00AF6F30 /* Frameworks */,
+				F147EDC71E77D8DC00AF6F30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F147EDCB1E77D8DC00AF6F30 /* PBXTargetDependency */,
+			);
+			name = SwiftDrawerMenuTests;
+			productName = SwiftDrawerMenuTests;
+			productReference = F147EDC91E77D8DC00AF6F30 /* SwiftDrawerMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F147EDD31E77D8DC00AF6F30 /* SwiftDrawerMenuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F147EDE31E77D8DC00AF6F30 /* Build configuration list for PBXNativeTarget "SwiftDrawerMenuUITests" */;
+			buildPhases = (
+				F147EDD01E77D8DC00AF6F30 /* Sources */,
+				F147EDD11E77D8DC00AF6F30 /* Frameworks */,
+				F147EDD21E77D8DC00AF6F30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F147EDD61E77D8DC00AF6F30 /* PBXTargetDependency */,
+			);
+			name = SwiftDrawerMenuUITests;
+			productName = SwiftDrawerMenuUITests;
+			productReference = F147EDD41E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F147EDAD1E77D8DC00AF6F30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Clark;
+				TargetAttributes = {
+					F147EDB41E77D8DC00AF6F30 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					F147EDC81E77D8DC00AF6F30 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F147EDB41E77D8DC00AF6F30;
+					};
+					F147EDD31E77D8DC00AF6F30 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F147EDB41E77D8DC00AF6F30;
+					};
+				};
+			};
+			buildConfigurationList = F147EDB01E77D8DC00AF6F30 /* Build configuration list for PBXProject "SwiftDrawerMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F147EDAC1E77D8DC00AF6F30;
+			productRefGroup = F147EDB61E77D8DC00AF6F30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F147EDB41E77D8DC00AF6F30 /* SwiftDrawerMenu */,
+				F147EDC81E77D8DC00AF6F30 /* SwiftDrawerMenuTests */,
+				F147EDD31E77D8DC00AF6F30 /* SwiftDrawerMenuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F147EDB31E77D8DC00AF6F30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F147EE031E77E51300AF6F30 /* OpenSans-Light.ttf in Resources */,
+				F147EDC31E77D8DC00AF6F30 /* LaunchScreen.storyboard in Resources */,
+				F147EE061E77E51300AF6F30 /* OpenSans.ttf in Resources */,
+				F147EE041E77E51300AF6F30 /* OpenSans-LightItalic.ttf in Resources */,
+				F147EDC01E77D8DC00AF6F30 /* Assets.xcassets in Resources */,
+				F147EE051E77E51300AF6F30 /* OpenSans-Semibold.ttf in Resources */,
+				F147EE011E77E51300AF6F30 /* OpenSans-Bold.ttf in Resources */,
+				F147EE021E77E51300AF6F30 /* OpenSans-Italic.ttf in Resources */,
+				F147EDBE1E77D8DC00AF6F30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147EDC71E77D8DC00AF6F30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147EDD21E77D8DC00AF6F30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34365C30AECD515C149E412C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDrawerMenu/Pods-SwiftDrawerMenu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50D69E20857D1ECEBE82FAD7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDrawerMenu/Pods-SwiftDrawerMenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		820B8FBCD6EC0D89360E40F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F147EDB11E77D8DC00AF6F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F147EDF41E77E0A200AF6F30 /* DrawerCell.swift in Sources */,
+				F147EE091E77E52400AF6F30 /* Colors.swift in Sources */,
+				F147EDBB1E77D8DC00AF6F30 /* ViewController.swift in Sources */,
+				F147EDEE1E77E06300AF6F30 /* DrawerViewController.swift in Sources */,
+				F147EDB91E77D8DC00AF6F30 /* AppDelegate.swift in Sources */,
+				F147EDF01E77E07900AF6F30 /* DrawerView.swift in Sources */,
+				F147EDF21E77E08B00AF6F30 /* InfoView.swift in Sources */,
+				F147EE121E78020E00AF6F30 /* GraphViewController.swift in Sources */,
+				F147EE0A1E77E52400AF6F30 /* Fonts.swift in Sources */,
+				F147EE0C1E77EB3E00AF6F30 /* BorderView.swift in Sources */,
+				F147EDEC1E77E00A00AF6F30 /* DrawerNavigationViewController.swift in Sources */,
+				F147EE0E1E77F34A00AF6F30 /* MultilineLabel.swift in Sources */,
+				F147EE101E77FB0900AF6F30 /* NavigationBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147EDC51E77D8DC00AF6F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F147EDCE1E77D8DC00AF6F30 /* SwiftDrawerMenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F147EDD01E77D8DC00AF6F30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F147EDD91E77D8DC00AF6F30 /* SwiftDrawerMenuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F147EDCB1E77D8DC00AF6F30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F147EDB41E77D8DC00AF6F30 /* SwiftDrawerMenu */;
+			targetProxy = F147EDCA1E77D8DC00AF6F30 /* PBXContainerItemProxy */;
+		};
+		F147EDD61E77D8DC00AF6F30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F147EDB41E77D8DC00AF6F30 /* SwiftDrawerMenu */;
+			targetProxy = F147EDD51E77D8DC00AF6F30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F147EDBC1E77D8DC00AF6F30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F147EDBD1E77D8DC00AF6F30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F147EDC11E77D8DC00AF6F30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F147EDC21E77D8DC00AF6F30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F147EDDB1E77D8DC00AF6F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F147EDDC1E77D8DC00AF6F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F147EDDE1E77D8DC00AF6F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF7555F00B9F9F236880B0C1 /* Pods-SwiftDrawerMenu.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftDrawerMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F147EDDF1E77D8DC00AF6F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17E5E09FE07A28E9F386B4D6 /* Pods-SwiftDrawerMenu.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwiftDrawerMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F147EDE11E77D8DC00AF6F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftDrawerMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDrawerMenu.app/SwiftDrawerMenu";
+			};
+			name = Debug;
+		};
+		F147EDE21E77D8DC00AF6F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftDrawerMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftDrawerMenu.app/SwiftDrawerMenu";
+			};
+			name = Release;
+		};
+		F147EDE41E77D8DC00AF6F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SwiftDrawerMenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SwiftDrawerMenu;
+			};
+			name = Debug;
+		};
+		F147EDE51E77D8DC00AF6F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = SwiftDrawerMenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SwiftDrawerMenu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F147EDB01E77D8DC00AF6F30 /* Build configuration list for PBXProject "SwiftDrawerMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147EDDB1E77D8DC00AF6F30 /* Debug */,
+				F147EDDC1E77D8DC00AF6F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F147EDDD1E77D8DC00AF6F30 /* Build configuration list for PBXNativeTarget "SwiftDrawerMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147EDDE1E77D8DC00AF6F30 /* Debug */,
+				F147EDDF1E77D8DC00AF6F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F147EDE01E77D8DC00AF6F30 /* Build configuration list for PBXNativeTarget "SwiftDrawerMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147EDE11E77D8DC00AF6F30 /* Debug */,
+				F147EDE21E77D8DC00AF6F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F147EDE31E77D8DC00AF6F30 /* Build configuration list for PBXNativeTarget "SwiftDrawerMenuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F147EDE41E77D8DC00AF6F30 /* Debug */,
+				F147EDE51E77D8DC00AF6F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F147EDAD1E77D8DC00AF6F30 /* Project object */;
+}
