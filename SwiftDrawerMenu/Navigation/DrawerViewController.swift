@@ -21,8 +21,11 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.drawerView.tableView.dataSource = self
+        self.drawerView.tableView.delegate = self
+        
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedFeedback))
-        self.drawerView.addGestureRecognizer(tapRecognizer)
+        self.drawerView.footerView.addGestureRecognizer(tapRecognizer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,13 +36,13 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
 
     //MARK: UITableViewDelegate and dataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewControllers.count
+        return 4
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = DrawerCell()
-        cell.titleLabel.text = self.viewControllers[indexPath.row].title!
+//        cell.titleLabel.text = self.viewControllers[indexPath.row].title!
         switch indexPath.row {
-        case 0,1,3:
+        case 0,1,2:
             cell.descriptionLabel.text = "Artificial Neural Network"
         default:
             cell.descriptionLabel.text = "Generic Algorithm"
@@ -54,7 +57,11 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK: Methods
     func tappedFeedback() {
         let url = URL(string: "https://github.com/fubusili")//https://github.com/collinhundley/Swift-AI/issues/new
-        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
 }

@@ -25,6 +25,7 @@ class DrawerCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.setNeedsUpdateConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {

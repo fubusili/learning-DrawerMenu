@@ -63,6 +63,7 @@ class DrawerView: UIView {
         footerLabel.snp.makeConstraints { (make) in
             make.left.right.equalTo(footerView).offset(15)
             make.centerY.equalTo(footerView.snp.centerY)
+            make.top.bottom.equalTo(footerView)
         }
         
     }
@@ -72,6 +73,8 @@ class DrawerView: UIView {
         self.addSubview(self.headerView)
         self.addSubview(self.tableView)
         self.addSubview(self.footerView)
+        self.headerView.addSubview(self.headerLabel)
+        self.footerView.addSubview(self.footerLabel)
         
         self.backgroundColor = .clear
         

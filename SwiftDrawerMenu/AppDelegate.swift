@@ -16,12 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let graphViewController = GraphViewController()
+        let graphViewController = DrawerViewController()
+        graphViewController.view.backgroundColor = .white
         graphViewController.title = "Regression"
         
         let drawerNavigationConroller = DrawerNavigationViewController(viewControllers: [graphViewController])
-        self.window?.rootViewController = drawerNavigationConroller
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = graphViewController
         self.window?.makeKeyAndVisible()
         return true
     }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3425094E758B70606CA46B9C /* Pods_SwiftDrawerMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D518C262B58648D26428AF1A /* Pods_SwiftDrawerMenu.framework */; };
 		F147EDB91E77D8DC00AF6F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDB81E77D8DC00AF6F30 /* AppDelegate.swift */; };
-		F147EDBB1E77D8DC00AF6F30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EDBA1E77D8DC00AF6F30 /* ViewController.swift */; };
 		F147EDBE1E77D8DC00AF6F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F147EDBC1E77D8DC00AF6F30 /* Main.storyboard */; };
 		F147EDC01E77D8DC00AF6F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F147EDBF1E77D8DC00AF6F30 /* Assets.xcassets */; };
 		F147EDC31E77D8DC00AF6F30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F147EDC11E77D8DC00AF6F30 /* LaunchScreen.storyboard */; };
@@ -57,7 +56,6 @@
 		D518C262B58648D26428AF1A /* Pods_SwiftDrawerMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDrawerMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F147EDB51E77D8DC00AF6F30 /* SwiftDrawerMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDrawerMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F147EDB81E77D8DC00AF6F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F147EDBA1E77D8DC00AF6F30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F147EDBD1E77D8DC00AF6F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F147EDBF1E77D8DC00AF6F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F147EDC21E77D8DC00AF6F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				F147EDE81E77D99F00AF6F30 /* HandwritingLearner */,
 				F147EDE71E77D99F00AF6F30 /* GenericAlgorithm */,
 				F147EDB81E77D8DC00AF6F30 /* AppDelegate.swift */,
-				F147EDBA1E77D8DC00AF6F30 /* ViewController.swift */,
 				F147EDBC1E77D8DC00AF6F30 /* Main.storyboard */,
 				F147EDBF1E77D8DC00AF6F30 /* Assets.xcassets */,
 				F147EDC11E77D8DC00AF6F30 /* LaunchScreen.storyboard */,
@@ -449,7 +446,6 @@
 			files = (
 				F147EDF41E77E0A200AF6F30 /* DrawerCell.swift in Sources */,
 				F147EE091E77E52400AF6F30 /* Colors.swift in Sources */,
-				F147EDBB1E77D8DC00AF6F30 /* ViewController.swift in Sources */,
 				F147EDEE1E77E06300AF6F30 /* DrawerViewController.swift in Sources */,
 				F147EDB91E77D8DC00AF6F30 /* AppDelegate.swift in Sources */,
 				F147EDF01E77E07900AF6F30 /* DrawerView.swift in Sources */,
@@ -613,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftDrawerMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -626,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftDrawerMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = clark.SwiftDrawerMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
