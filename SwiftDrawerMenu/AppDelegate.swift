@@ -13,16 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let graphViewController = DrawerViewController()
+        let graphViewController = GraphViewController()
         graphViewController.view.backgroundColor = .white
         graphViewController.title = "Regression"
         
-        let drawerNavigationConroller = DrawerNavigationViewController(viewControllers: [graphViewController])
+        let handwritingController = HandwritingViewController()
+//        handwritingController.view.backgroundColor = .white
+        handwritingController.title = "Handwriting"
+        
+        let handwritingLearnController = HandwritingLearnViewController()
+        //        handwritingLearnController.view.backgroundColor = .white
+        handwritingLearnController.title = "Handwriting-Test"
+        
+        let geneticAlgorihmController = GeneticAlgorithmViewController()
+        //        geneticAlgorihmController.view.backgroundColor = .white
+        geneticAlgorihmController.title = "Evolution"
+        
+        let drawerNavigationConroller = DrawerNavigationViewController(viewControllers: [graphViewController, handwritingController, handwritingLearnController, geneticAlgorihmController])
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = graphViewController
+        self.window?.rootViewController = drawerNavigationConroller
         self.window?.makeKeyAndVisible()
         return true
     }

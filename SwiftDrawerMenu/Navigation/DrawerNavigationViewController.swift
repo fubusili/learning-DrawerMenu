@@ -15,9 +15,16 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
     let navBar = NavigationBar()
     var drawerViewController: DrawerViewController!
     var viewControllers = [UIViewController]()
+    var drawerLocked = false
     
+    // Private state variables
     fileprivate var views = [UIView]()
     fileprivate var currentView: UIView!
+    fileprivate var touchBeginLocation: CGPoint?
+    fileprivate var open = false
+    
+    fileprivate var infoView: InfoView?
+    fileprivate let infoViewThreshold: CGFloat = 80
     
     fileprivate static var globalDrwerNavController: DrawerNavigationViewController!
 
@@ -30,6 +37,14 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.drawerColor()
+        
+        self.navBar.hamburgerButton.addTarget(self, action: #selector(hamburgerTapped), for: .touchUpInside)
+        self.view.addSubview(self.navBar)
+        navBar.snp.makeConstraints { (make) in
+            make.left.right.equalTo(self.view)
+            make.top.equalTo(self.view)
+            make.height.equalTo(64)
+        }
         
         self.drawerViewController = DrawerViewController()
         self.drawerViewController.viewControllers = self.viewControllers
@@ -75,6 +90,46 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         self.globalDrwerNavController = controller
     }
     
+    //MARK: Methods
+    
+    func hamburgerTapped() {
+        self.transformDrwer()
+        if self.open {
+            self.closeDrawer(completion: nil)
+        } else {
+            self.openDrawer(completion: nil)
+        }
+    }
+    
+    
+    func openDrawer(completion: (() -> Void)?) {
+        if self.drawerLocked || self.open{
+            completion?()
+            return
+        }
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5, options: .allowUserInteraction, animations: {
+            self.currentView.transform = CGAffineTransform(translationX: self.drawerWidth, y: 0)
+            self.transformDrwer()
+        }) { (Bool) in
+            self.open = true
+        }
+    }
+    
+    
+    func closeDrawer(completion: (() -> Void)?) {
+        if self.drawerLocked || !self.open{
+            completion?()
+            return
+        }
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 5, options: .allowUserInteraction, animations: {
+            self.currentView.transform = CGAffineTransform.identity
+            self.transformDrwer()
+        }) { (Bool) in
+            self.open = false
+            completion?()
+        }
+    }
+    
     //MARK: Private methods
     fileprivate func addShadowToCurrentView() {
         self.currentView.layer.shadowColor = UIColor.darkGray.cgColor
@@ -82,5 +137,115 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         self.currentView.layer.shadowRadius = 5
         self.currentView.layer.shadowOffset = CGSize(width: -3, height: 5)
     }
-
+    
+    fileprivate func transformDrwer() {
+        let x = self.currentView.transform.tx
+        var scale = 0.00007 * x + 0.98
+        scale = scale.clamp(min: 0.98, max: 1.0)
+        self.drawerViewController.drawerView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        var translate = -0.033 * x + 10
+        translate = translate.clamp(min: 0, max: 10)
+        self.drawerViewController.drawerView.transform = self.drawerViewController.drawerView.transform.translatedBy(x: translate, y: 0)
+        
+    }
+    
+    //MARK: Touch delegate
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.drawerLocked {
+            return
+        }
+        switch self.infoView {
+        case nil:
+            let location = touches.first!.location(in: self.currentView)
+            self.touchBeginLocation = location
+            
+        default:
+            let location = touches.first!.location(in: infoView)
+            self.touchBeginLocation = location
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.drawerLocked {
+            return
+        }
+        switch self.infoView {
+        case nil:
+            let location = touches.first!.location(in: self.currentView)
+            let x = location.x
+            if let start = self.touchBeginLocation {
+                let diff = x - start.x
+                self.currentView.transform = self.currentView.transform.translatedBy(x: diff, y: 0)
+                self.transformDrwer()
+                if self.currentView.transform.tx < 0 {
+                    self.currentView.transform = CGAffineTransform.identity
+                } else if self.currentView.transform.tx > self.drawerWidth {
+                    let distance = pow(self.currentView.transform.tx, 0.8)
+                    self.currentView.transform = CGAffineTransform(translationX: self.drawerWidth + distance, y: 0)
+                }
+                
+            }
+            
+        default:
+            let location = touches.first!.location(in: self.infoView)
+            let y = location.y
+            if let start = self.touchBeginLocation {
+                let diff = y - start.y
+                self.infoView!.transform = self.infoView!.transform.translatedBy(x: 0, y: diff)
+                if self.infoView!.transform.ty < 0 {
+                    self.infoView!.transform = CGAffineTransform.identity
+                }
+            }
+            
+            
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.drawerLocked {
+            return
+        }
+        if self.infoView != nil {
+            if self.infoView!.transform.ty > self.infoViewThreshold {
+                
+            } else {
+                
+            }
+            return
+        }
+        switch self.open {
+        case true:
+            if self.currentView.transform.tx < self.drawerWidth - 20 {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 5, options: .allowUserInteraction, animations: { 
+                    self.currentView.transform = CGAffineTransform.identity
+                    self.transformDrwer()
+                }, completion: { (Bool) in
+                    self.open = false
+                })
+            } else {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5, options: .allowUserInteraction, animations: { 
+                    self.currentView.transform = CGAffineTransform(translationX: self.drawerWidth, y: 0)
+                }, completion: { (Bool) in
+                    self.open = true
+                })
+            }
+        default:
+            if self.currentView.transform.tx < 20 {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 5, options: .allowUserInteraction, animations: {
+                    self.currentView.transform = CGAffineTransform.identity
+                }, completion: { (Bool) in
+                    self.open = false
+                })
+            } else {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5, options: .allowUserInteraction, animations: { 
+                    self.currentView.transform = CGAffineTransform(translationX: self.drawerWidth, y: 0)
+                    self.transformDrwer()
+                }, completion: { (Bool) in
+                    self.open = true
+                })
+            }
+        }
+    }
+    
+    
 }

@@ -40,7 +40,7 @@ class DrawerViewController: UIViewController, UITableViewDataSource, UITableView
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = DrawerCell()
-//        cell.titleLabel.text = self.viewControllers[indexPath.row].title!
+        cell.titleLabel.text = self.viewControllers[indexPath.row].title!
         switch indexPath.row {
         case 0,1,2:
             cell.descriptionLabel.text = "Artificial Neural Network"

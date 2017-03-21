@@ -53,6 +53,9 @@ class DrawerCell: UITableViewCell {
         self.contentView.addSubview(self.titleLabel)
         self.contentView.addSubview(self.descriptionLabel)
         
+        self.backgroundColor = UIColor.drawerColor()
+        self.selectedBackgroundView = self.selectionView
+        
         self.titleLabel.textColor = UIColor.swiftLightGray()
         self.titleLabel.font = UIFont.swiftFontOfSize(18)
         

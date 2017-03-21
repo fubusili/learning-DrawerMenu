@@ -70,14 +70,16 @@ class DrawerView: UIView {
     
     //MARK: Private methods
     func setupSubviews() {
+        
+        self.backgroundColor = UIColor.drawerColor()
+        
         self.addSubview(self.headerView)
         self.addSubview(self.tableView)
         self.addSubview(self.footerView)
         self.headerView.addSubview(self.headerLabel)
         self.footerView.addSubview(self.footerLabel)
         
-        self.backgroundColor = .clear
-        
+        self.headerView.backgroundColor = UIColor.clear
         self.headerLabel.text = "Example Projects"
         self.headerLabel.font = UIFont.swiftFontOfSize(18)
         self.headerLabel.textColor = UIColor.swiftLightGray()
@@ -85,10 +87,9 @@ class DrawerView: UIView {
         self.tableView.backgroundColor = UIColor.drawerColor()
         self.tableView.isScrollEnabled = false
         
-        self.footerView.backgroundColor = UIColor.clear
-        
+        self.footerView.backgroundColor = .clear
         let text = NSMutableAttributedString(string: "Feebaack or ideas?\nLet me know on Github")
-        text.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleSingle, range: NSMakeRange(text.length - 6, 6))
+        text.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleSingle.rawValue, range: NSMakeRange(text.length - 6, 6))
         self.footerLabel.attributedText = text
         self.footerLabel.font = UIFont.swiftFontOfSize(13)
         self.footerLabel.textColor = UIColor.swiftLightGray()
