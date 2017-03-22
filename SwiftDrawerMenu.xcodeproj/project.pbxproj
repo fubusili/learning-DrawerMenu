@@ -32,6 +32,9 @@
 		F147EE101E77FB0900AF6F30 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE0F1E77FB0900AF6F30 /* NavigationBar.swift */; };
 		F147EE121E78020E00AF6F30 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147EE111E78020E00AF6F30 /* GraphViewController.swift */; };
 		F16425671E7F8B770049A9B7 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16425661E7F8B770049A9B7 /* Math.swift */; };
+		F1991B5A1E825730008296E9 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1991B591E825730008296E9 /* SpringButton.swift */; };
+		F1991B5C1E8257C8008296E9 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1991B5B1E8257C8008296E9 /* View.swift */; };
+		F1991B5E1E8274E7008296E9 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1991B5D1E8274E7008296E9 /* GraphView.swift */; };
 		F1AFC54F1E7F7410005B2936 /* HandwritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFC54E1E7F7410005B2936 /* HandwritingViewController.swift */; };
 		F1AFC5511E7F760E005B2936 /* HandwritingLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFC5501E7F760E005B2936 /* HandwritingLearnViewController.swift */; };
 		F1AFC5531E7F763F005B2936 /* GeneticAlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFC5521E7F763F005B2936 /* GeneticAlgorithmViewController.swift */; };
@@ -88,6 +91,9 @@
 		F147EE0F1E77FB0900AF6F30 /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		F147EE111E78020E00AF6F30 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		F16425661E7F8B770049A9B7 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		F1991B591E825730008296E9 /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		F1991B5B1E8257C8008296E9 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		F1991B5D1E8274E7008296E9 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F1AFC54E1E7F7410005B2936 /* HandwritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingViewController.swift; sourceTree = "<group>"; };
 		F1AFC5501E7F760E005B2936 /* HandwritingLearnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingLearnViewController.swift; sourceTree = "<group>"; };
 		F1AFC5521E7F763F005B2936 /* GeneticAlgorithmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneticAlgorithmViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +211,9 @@
 				F147EE0B1E77EB3E00AF6F30 /* BorderView.swift */,
 				F147EE0D1E77F34A00AF6F30 /* MultilineLabel.swift */,
 				F147EE0F1E77FB0900AF6F30 /* NavigationBar.swift */,
+				F1991B591E825730008296E9 /* SpringButton.swift */,
 				F16425661E7F8B770049A9B7 /* Math.swift */,
+				F1991B5B1E8257C8008296E9 /* View.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F147EE111E78020E00AF6F30 /* GraphViewController.swift */,
+				F1991B5D1E8274E7008296E9 /* GraphView.swift */,
 			);
 			path = Graphs;
 			sourceTree = "<group>";
@@ -469,9 +478,12 @@
 				F147EE0A1E77E52400AF6F30 /* Fonts.swift in Sources */,
 				F147EE0C1E77EB3E00AF6F30 /* BorderView.swift in Sources */,
 				F147EDEC1E77E00A00AF6F30 /* DrawerNavigationViewController.swift in Sources */,
+				F1991B5A1E825730008296E9 /* SpringButton.swift in Sources */,
+				F1991B5C1E8257C8008296E9 /* View.swift in Sources */,
 				F147EE0E1E77F34A00AF6F30 /* MultilineLabel.swift in Sources */,
 				F147EE101E77FB0900AF6F30 /* NavigationBar.swift in Sources */,
 				F16425671E7F8B770049A9B7 /* Math.swift in Sources */,
+				F1991B5E1E8274E7008296E9 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

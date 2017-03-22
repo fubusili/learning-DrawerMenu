@@ -28,10 +28,11 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
     
     fileprivate static var globalDrwerNavController: DrawerNavigationViewController!
 
-    //MARK: Init
+    //MARK: - Init
     convenience init(viewControllers: [UIViewController]) {
         self.init()
         self.viewControllers = viewControllers
+        DrawerNavigationViewController.setGlobalDrawerController(self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,19 +82,19 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
     }
     
 
-    //MARK: Public methods
+    //MARK: - Public methods
     class func globalDrawerController() -> DrawerNavigationViewController {
-        return self.globalDrawerController()
+        return self.globalDrwerNavController
     }
     
     class func setGlobalDrawerController(_ controller: DrawerNavigationViewController) {
         self.globalDrwerNavController = controller
     }
     
-    //MARK: Methods
+    //MARK: - Methods
     
     func hamburgerTapped() {
-        self.transformDrwer()
+        self.transformDrawer()
         if self.open {
             self.closeDrawer(completion: nil)
         } else {
@@ -109,7 +110,7 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         }
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5, options: .allowUserInteraction, animations: {
             self.currentView.transform = CGAffineTransform(translationX: self.drawerWidth, y: 0)
-            self.transformDrwer()
+            self.transformDrawer()
         }) { (Bool) in
             self.open = true
         }
@@ -123,14 +124,14 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         }
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 5, options: .allowUserInteraction, animations: {
             self.currentView.transform = CGAffineTransform.identity
-            self.transformDrwer()
+            self.transformDrawer()
         }) { (Bool) in
             self.open = false
             completion?()
         }
     }
     
-    //MARK: Private methods
+    //MARK: - Private methods
     fileprivate func addShadowToCurrentView() {
         self.currentView.layer.shadowColor = UIColor.darkGray.cgColor
         self.currentView.layer.shadowOpacity = 0.7
@@ -138,7 +139,7 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         self.currentView.layer.shadowOffset = CGSize(width: -3, height: 5)
     }
     
-    fileprivate func transformDrwer() {
+    fileprivate func transformDrawer() {
         let x = self.currentView.transform.tx
         var scale = 0.00007 * x + 0.98
         scale = scale.clamp(min: 0.98, max: 1.0)
@@ -149,7 +150,7 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         
     }
     
-    //MARK: Touch delegate
+    //MARK: - Touch delegate
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if self.drawerLocked {
             return
@@ -176,11 +177,11 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
             if let start = self.touchBeginLocation {
                 let diff = x - start.x
                 self.currentView.transform = self.currentView.transform.translatedBy(x: diff, y: 0)
-                self.transformDrwer()
+                self.transformDrawer()
                 if self.currentView.transform.tx < 0 {
                     self.currentView.transform = CGAffineTransform.identity
                 } else if self.currentView.transform.tx > self.drawerWidth {
-                    let distance = pow(self.currentView.transform.tx, 0.8)
+                    let distance = pow(self.currentView.transform.tx - self.drawerWidth, 0.8)
                     self.currentView.transform = CGAffineTransform(translationX: self.drawerWidth + distance, y: 0)
                 }
                 
@@ -207,18 +208,25 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         }
         if self.infoView != nil {
             if self.infoView!.transform.ty > self.infoViewThreshold {
-                
+                if self.infoView!.transform.ty > self.infoViewThreshold {
+                    self.dismissInfoView()
+                }
             } else {
+                
+                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .allowUserInteraction, animations: { 
+                    self.infoView!.transform = CGAffineTransform.identity
+                }, completion: nil)
                 
             }
             return
         }
+        print(self.currentView.transform.tx)
         switch self.open {
         case true:
             if self.currentView.transform.tx < self.drawerWidth - 20 {
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 5, options: .allowUserInteraction, animations: { 
                     self.currentView.transform = CGAffineTransform.identity
-                    self.transformDrwer()
+                    self.transformDrawer()
                 }, completion: { (Bool) in
                     self.open = false
                 })
@@ -239,7 +247,7 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
             } else {
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 5, options: .allowUserInteraction, animations: { 
                     self.currentView.transform = CGAffineTransform(translationX: self.drawerWidth, y: 0)
-                    self.transformDrwer()
+                    self.transformDrawer()
                 }, completion: { (Bool) in
                     self.open = true
                 })
@@ -247,5 +255,32 @@ class DrawerNavigationViewController: UIViewController, UIGestureRecognizerDeleg
         }
     }
     
+    //MARK: - InfoView
+    func presentInfoView(_ infoView: InfoView) {
+        guard self.infoView == nil else {
+            return
+            
+        }
+        self.infoView = infoView
+        self.view.addSubview(infoView)
+        infoView.dismissButton.addTarget(self, action: #selector(dismissInfoView), for: .touchUpInside)
+        infoView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height)
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .allowUserInteraction, animations: { 
+            infoView.transform = CGAffineTransform.identity
+        }, completion: nil)
+    }
+    
+    func dismissInfoView() {
+        guard let infoView = self.infoView else {
+            return
+        }
+        
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .allowUserInteraction, animations: { 
+            infoView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height)
+        }) { (Bool) in
+            infoView.removeFromSuperview()
+            self.infoView = nil
+        }
+    }
     
 }
